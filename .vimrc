@@ -20,7 +20,7 @@ set hidden                      " Switch between buffers without having to save 
 set laststatus=2                " Always show statusline.
 set display=lastline            " Show as much as possible of the last line.
 set number
-set numberwidth=7
+set numberwidth=5
 set relativenumber
 
 set showmode                    " Show current mode in command-line.
@@ -36,6 +36,8 @@ set splitbelow                  " Open new windows below the current window.
 set splitright                  " Open new windows right of the current window.
 
 set cursorline                  " Find the current line quickly.
+highlight CursorLine cterm=NONE ctermbg=0
+
 set wrapscan                    " Searches wrap around end-of-file.
 set report=0                    " Always report changed lines.
 
