@@ -10,7 +10,6 @@ filetype plugin indent on       " Load plugins according to detected filetype.
 syntax on                       " Enable syntax highlighting.
 
 set autoindent                  " Indent according to previous line.
-set expandtab                   " Use spaces instead of tabs.
 set softtabstop=8               " Tab key indents by 8 spaces.
 set shiftwidth=8                " >> indents by 8 spaces.
 set shiftround                  " >> indents to next multiple of 'shiftwidth'.
@@ -36,7 +35,7 @@ set splitbelow                  " Open new windows below the current window.
 set splitright                  " Open new windows right of the current window.
 
 set cursorline                  " Find the current line quickly.
-highlight CursorLine cterm=NONE ctermbg=0
+highlight CursorLine cterm=NONE
 
 set wrapscan                    " Searches wrap around end-of-file.
 set report=0                    " Always report changed lines.
@@ -53,3 +52,4 @@ endif
 if &shell =~# 'fish$'
         set shell=/bin/bash
 endif
+
