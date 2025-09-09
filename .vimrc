@@ -7,49 +7,48 @@
 set nocompatible
 
 filetype plugin indent on       " Load plugins according to detected filetype.
-syntax on                       " Enable syntax highlighting.
+syntax on			" Enable syntax highlighting.
 
-set autoindent                  " Indent according to previous line.
-set softtabstop=8               " Tab key indents by 8 spaces.
-set shiftwidth=8                " >> indents by 8 spaces.
-set shiftround                  " >> indents to next multiple of 'shiftwidth'.
+set autoindent			" Indent according to previous line.
+set softtabstop=8		" Tab key indents by 8 spaces.
+set shiftwidth=8		" >> indents by 8 spaces.
+set shiftround			" >> indents to next multiple of 'shiftwidth'.
 
-set backspace=indent,eol,start  " Make backspace work as you would expect.
-set hidden                      " Switch between buffers without having to save first.
-set laststatus=2                " Always show statusline.
-set display=lastline            " Show as much as possible of the last line.
+set backspace=indent,eol,start	" Make backspace work as you would expect.
+set hidden			" Switch between buffers without having to save first.
+set laststatus=2		" Always show statusline.
+set display=lastline		" Show as much as possible of the last line.
+
 set number
 set numberwidth=5
 set relativenumber
 
-set showmode                    " Show current mode in command-line.
-set showcmd                     " Show already typed keys when more are expected.
+set showmode			" Show current mode in command-line.
+set showcmd			" Show already typed keys when more are expected.
 
-set incsearch                   " Highlight while searching with / or ?.
-set hlsearch                    " Keep matches highlighted.
+set incsearch			" Highlight while searching with / or ?.
+set hlsearch			" Keep matches highlighted.
 
-set ttyfast                     " Faster redrawing.
-set lazyredraw                  " Only redraw when necessary.
+set ttyfast			" Faster redrawing.
+set lazyredraw			" Only redraw when necessary.
 
-set splitbelow                  " Open new windows below the current window.
-set splitright                  " Open new windows right of the current window.
+set splitbelow			" Open new windows below the current window.
+set splitright			" Open new windows right of the current window.
 
-set cursorline                  " Find the current line quickly.
+set cursorline			" Find the current line quickly.
 highlight CursorLine cterm=NONE
+set wrapscan			" Searches wrap around end-of-file.
+set report=0			" Always report changed lines.
 
-set wrapscan                    " Searches wrap around end-of-file.
-set report=0                    " Always report changed lines.
-
-set list                        " Show non-printable characters.
+set list			" Show non-printable characters.
 if has('multi_byte') && &encoding ==# 'utf-8'
-        let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
+	let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 else
-        let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
+	let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
 endif
 
 " The fish shell is not very compatible to other shells and unexpectedly
 " breaks things that use 'shell'.
 if &shell =~# 'fish$'
-        set shell=/bin/bash
+	set shell=/bin/bash
 endif
-
